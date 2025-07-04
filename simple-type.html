@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单打字练习</title>
+    <link rel="stylesheet" href="simple-type.css">
+</head>
+<body>
+    <div class="container">
+        <h1>自定义打字练习</h1>
+        
+        <div class="control-panel">
+            <textarea id="text-input" placeholder="在此粘贴你想练习的文本...">The quick brown fox jumps over the lazy dog. This is a typing test. You can paste your own text here.</textarea>
+            <button id="load-button">加载文本开始练习</button>
+        </div>
+        
+        <div class="stats">
+            <div>速度: <span id="speed">0</span> 字符/分钟</div>
+            <div>错误: <span id="errors">0</span> 次</div>
+        </div>
+        
+        <div id="typing-area">
+            <div id="input-div" class="typing-text"></div>
+        </div>
+
+        <div id="results" class="results-panel">
+            <h2>练习结果</h2>
+            <div class="result-item">最终速度: <span id="final-speed">0</span> 字符/分钟</div>
+            <div class="result-item">错误率: <span id="error-rate">0</span>%</div>
+            <div class="error-chars">
+                <h3>错误字符统计:</h3>
+                <ul id="error-list"></ul>
+            </div>
+            <div class="d-flex gap-2 mt-3">
+          <button id="restart-button" class="btn btn-primary">再来一次</button>
+          <button id="targeted-practice-btn" class="btn btn-warning" style="display: none;">针对性练习错误字符</button>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="simple-type.js"></script>
+</body>
+</html>
